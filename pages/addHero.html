@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/c311c955b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/addHero.css">
+    <title>Añade tu heroe</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="discount">
+                <p>20% de descuento en todos los productos!</p>
+            </div>
+            <div class="nav-heroes">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="logo tienda  ">
+                    <h1>Nombre Tienda</h1>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="../index.html" target="_blank">Home</a></li>
+                    <li><a href="./pages/addHero.html" target="_blank">Añadir Heroe</a></li>
+                    <li><a href="#">Registro</a></li>
+                    <li><a href="#">Ingresar</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="section-center">
+            <div class="form-container">
+                <h2>Añade tu super!</h2>
+                <p>Agrega tu personaje favorito completando las opciones.</p>
+                <form action="#" class="hero-form" id="hero-form">
+                    <div class="col">
+                        <div class="input-box">
+                            <label for="name" class="input-title"><span>*</span>Nombre</label>
+                            <input type="text" autocomplete="off" name="name" id="name" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="date" class="input-title"><span>*</span>Fecha</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="desc" class="input-title"><span>*</span>Descripción</label>
+                            <textarea name="desc" id="desc" cols="30" rows="10" required
+                                placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-box">
+                            <label for="species" class="input-title"><span>*</span>Especie</label>
+                            <select name="species" id="species" required>
+                                <option value="default" selected hidden> - Especie - </option>
+                                <option value="unknown">Unknown</option>
+                                <option value="human">Humano</option>
+                                <option value="kryptonian">Kryptoniano</option>
+                                <option value="lanternCorp">Lantern Corp</option>
+                                <option value="metahuman">Metahumano</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="photo" class="input-title">Agregar Foto</label>
+                            <input type="file" name="photo" id="photo">
+                        </div>
+                        <div class="input-box">
+                            <p class="input-title">Poderes</p>
+                            <div class="check-radio">
+                                <input type="checkbox" name="power-fly" id="power-fly">
+                                <label for="power-fly">Volar</label>
+                            </div>
+
+                            <div class="check-radio">
+                                <input type="checkbox" name="power-superint" id="power-superint">
+                                <label for="power-superint">Superinteligencia</label>
+                            </div>
+
+                            <div class="check-radio">
+                                <input type="checkbox" name="power-laser-sight" id="power-laser-sight">
+                                <label for="power-laser-sight">Vista de rayo láser</label>
+                            </div>
+
+                            <div class="check-radio">
+                                <input type="checkbox" name="power-rich" id="power-rich">
+                                <label for="power-rich">Billetera Gorda</label>
+                            </div>
+                        </div>
+                        <div class="sep-line"></div>
+                        <div class="input-box">
+                            <p class="input-title">Tipo de personaje</p>
+                            <div class="check-radio">
+                                <input type="radio" name="type" id="hero">
+                                <label for="hero">Héroe / Heroina</label>
+                            </div>
+
+                            <div class="check-radio">
+                                <input type="radio" name="type" id="villian">
+                                <label for="villian">Villano / Villana</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button type="submit" form="hero-form" class="submit-btn">Añadir</button>
+            </div>
+        </div>
+    </main>
+    <div class="footer-container">
+        <footer>
+            <p>Todos los derechos reservados a FRONT END 1</p>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

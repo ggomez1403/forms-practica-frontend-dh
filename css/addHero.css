@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --clr-aqua: #1CD1B0;
+    --clr-blue: #00669F;
+    --clr-dark-blue: #001D2D;
+    --clr-white: #FFF;
+    --ff-primary: 'Roboto', sans-serif;
+    --transition: all 0.3s linear;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    font-family: var(--ff-primary);
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    border: transparent;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    border-radius: 0.8rem;
+}
+
+input[type="file"] {
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input:not([type="file"],
+    [type="radio"],
+    [type="checkbox"]):focus,
+textarea:focus,
+select:focus {
+    outline: 4px solid var(--clr-aqua);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--clr-aqua);
+    height: 20px;
+    width: 20px;
+}
+
+.form-container {
+    margin: 3rem;
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    padding: 1rem 0.5rem;
+    border-radius: 3.1rem;
+    max-width: 992px;
+    min-width: 320px;
+    width: 100%;
+}
+
+.form-container h2,
+.form-container p {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.form-container p,
+label {
+    font-weight: 300;
+}
+
+.hero-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.input-box span {
+    color: var(--clr-aqua);
+    padding-right: 0.3rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.input-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.input-box p {
+    text-align: left;
+    padding: 0;
+}
+
+.sep-line {
+    background-color: var(--clr-white);
+    height: 0.7px;
+    margin: 0 1rem;
+}
+
+.check-radio {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.check-radio label {
+    margin-left: 0.7rem;
+}
+
+.submit-btn {
+    margin: 1rem auto 1.5rem;
+    padding: 0.5rem 4rem;
+    border: transparent;
+    font-size: 1.2rem;
+    border-radius: 1.2rem;
+    background-color: var(--clr-aqua);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn:hover {
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-white);
+}
+
+@media screen and (min-width: 830px) {
+    .hero-form {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 4rem;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0.7rem;
+    }
+
+    .form-container h2 {
+        font-size: 2.5rem;
+    }
+
+    .form-container p {
+        font-size: 1.3rem;
+    }
+
+    .submit-btn {
+        font-size: 1.8rem;
+        padding: 1rem 10rem;
+    }
+}

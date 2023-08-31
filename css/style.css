@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-aqua: #1CD1B0;
+    --clr-blue: #00669F;
+    --clr-dark-blue: #001D2D;
+    --clr-white: #FFF;
+    --clr-red: #CC2424;
+    --border-radius: 50%;
+    --ff-primary: 'Roboto', sans-serif;
+    --box-shadow-primary: 0px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    --box-shadow-secondary: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --transition: all 0.3s linear;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+body {
+    font-family: var(--ff-primary);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.section-center {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.discount {
+    background-color: var(--clr-aqua);
+    font-weight: bold;
+    padding: 0.1rem 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.nav-heroes {
+    color: var(--clr-white);
+    background-color: var(--clr-blue);
+    font-size: 0.7rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.logo h1 {
+    margin-left: 0.8rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    transform: scale(1.15);
+}
+
+.nav-links {
+    height: 0;
+    background-color: var(--clr-dark-blue);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.nav-links a {
+    color: var(--clr-white);
+}
+
+.nav-links li {
+    font-size: 1rem;
+    padding: 1.15rem;
+    transition: var(--transition);
+}
+
+.nav-links li:hover {
+    background-color: var(--clr-blue);
+    padding-left: 2.3rem;
+    font-weight: bold;
+}
+
+.show-links {
+    height: 280px;
+    transition: var(--transition);
+}
+
+.cards-section {
+    margin: 3rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.card {
+    height: 500px;
+    box-shadow: var(--box-shadow-secondary);
+    width: 100%;
+    max-width: 300px;
+    min-width: 280px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 5px 0px rgba(164, 164, 164, 0.75);
+}
+
+.card-media {
+    position: relative;
+    margin-bottom: 4.5rem;
+}
+
+.profile-pic {
+    width: 45%;
+    position: absolute;
+    top: 60%;
+    left: 28%;
+    border-radius: 50%;
+}
+
+.bg-pic {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.fa-heart {
+    position: absolute;
+    top: 9%;
+    left: 7%;
+    color: var(--clr-red);
+    font-size: 1.5rem;
+}
+
+.card-info {
+    margin: 0 0.8rem;
+    text-align: center;
+}
+
+.card-info h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    text-align: left;
+    height: 120px;
+}
+
+.card-info a {
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    padding: 0.8rem 2.5rem;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.card-info a:hover {
+    background-color: var(--clr-dark-blue);
+}
+
+aside a {
+    background-color: var(--clr-blue);
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--clr-white);
+    transition: var(--transition);
+}
+
+aside a:hover {
+    background-color: var(--clr-dark-blue);
+    transform: scale(1.15);
+}
+
+footer {
+    background-color: var(--clr-blue);
+    display: flex;
+    color: var(--clr-white);
+    height: 60px;
+    font-size: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 530px) and (max-width: 800px) {
+    .card {
+        min-width: 500px;
+        height: 650px;
+    }
+
+    .cards-section {
+        gap: 4rem;
+    }
+
+    .profile-pic {
+        width: 35%;
+        left: 32%;
+        top: 70%;
+    }
+
+    .card-info {
+        margin: 6rem 1.5rem;
+    }
+
+    .card-info p {
+        height: 110px;
+        font-size: 1.05rem;
+    }
+
+    .fa-heart {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .discount {
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .logo h1 {
+        margin-left: 1.2rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        height: 35px;
+    }
+
+    .nav-links ul {
+        display: flex;
+        height: 35px;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.2rem;
+        box-shadow: var(--box-shadow-primary);
+        padding-right: 1rem;
+    }
+
+    .nav-links a {
+        color: var(--clr-white);
+    }
+
+    .nav-links li {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        justify-content: center;
+    }
+
+    .nav-links li:nth-child(2) {
+        width: 130px;
+    }
+
+    .nav-links li:hover {
+        padding-left: 0;
+    }
+
+    main {
+        min-height: calc(100vh - 190px);
+        display: flex;
+        align-items: center;
+    }
+
+    .cards-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2rem 1.5rem;
+        justify-content: center;
+    }
+
+    footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    aside a {
+        right: 20px;
+        height: 65px;
+        width: 65px;
+        font-size: 3.3rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    aside a {
+        right: 50px;
+    }
+}
